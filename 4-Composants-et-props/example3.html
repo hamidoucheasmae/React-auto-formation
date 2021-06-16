@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React-autoformation</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js" crossorigin></script>
+    <script type="text/babel">
+        function formatDate(date) {
+            return date.toLocaleDateString();
+        }
+
+
+        function Comment(props) {
+            return (
+                <div className="Comment">
+                    <div className="UserInfo">
+                        <img className="Avatar" src={props.author.avatarUrl} alt={props.author.name} />
+                        <div className="UserInfo-name">
+                            {props.author.name}
+                        </div>
+                    </div>
+                    <div className="comment-text">
+                        {props.text}
+                    </div>
+                    <div className="comment-date">
+                        {formatDate(props.date)}
+                    </div>
+                </div>
+            );
+        }
+
+
+
+        const comment = {
+            date: new Date(),
+            text: "Hi!!!",
+            author: {
+                name: 'Asmae Hamidouche',
+                avatarUrl: 'https://forum.truckersmp.com/uploads/monthly_2019_06/imported-photo-186659.thumb.jpeg.7ca80c40fa6e972e04cc2f14f5114d80.jpeg'
+            },            
+        };
+        ReactDOM.render(
+            <Comment
+            text={comment.text}
+                date={comment.date}
+        
+                author={comment.author}
+            />,
+            document.getElementById('root')
+        );
+    </script>
+
+
+
+</body>
+
+</html>
