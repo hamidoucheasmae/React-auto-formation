@@ -1,0 +1,29 @@
+* {
+  color: #333;
+  font-family: 'Open Sans', sans-serif;
+}
+h1 { font-size: 24px }
+form { margin-bottom: 20px }
+i { font-style: normal }
+
+.task {
+  color: #616161;
+  padding: 20px;
+  border-left: 5px solid #eee;
+}
+.task:hover {
+  cursor: pointer;
+  opacity: .64;
+}
+.task p:last-child { margin-bottom: 0 }
+.task+.task { margin-top: -5px }
+.task-success {
+  background-color: #E8F5E9;
+  border-left-color: #4CAF50;
+  text-decoration: line-through;
+  font-style: italic;
+}
+.task-info {
+  background-color: #E1F5FE;
+  border-left-color: #03A9F4;
+}
