@@ -23,13 +23,19 @@
     
   }
 }
- function root()
- <div>
-<Welcome name="aaaa"/>
-<Welcome name="aaaa"/>
-<Welcome name="aaaa"/>
-    </div>
-ReactDOM.render(<root/> , document.getElementById('root'));
+function App() {
+            return(
+            <div>
+                <Welcome name="Asmae" />
+                <Welcome name="Fatima" />
+                <Welcome name="Jaafar" />
+            </div>
+        );
+        }
+
+        ReactDOM.render(
+            <App />, document.getElementById('root')
+        );
   </script>
 </body>
 
