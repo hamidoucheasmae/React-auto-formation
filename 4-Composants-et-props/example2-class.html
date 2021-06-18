@@ -14,22 +14,16 @@
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js" crossorigin></script>
     <script type="text/babel">
-        function Welcome(props) {
-            return <h1>Bonjour, {props.name}</h1>
-        }
-        function App() {
-            return(
-            <div>
-                <Welcome name="Asmae" />
-                <Welcome name="Fatima" />
-                <Welcome name="Jaafar" />
-            </div>
-        );
-        }
+       class Welcome extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return <h2>Welcome {this.props.name}!</h2> 
+  }
+}
 
-        ReactDOM.render(
-            <App />, document.getElementById('root')
-        );
+ReactDOM.render(<Welcome name="asmae"/> , document.getElementById('root'));
     </script>
 </body>
 
