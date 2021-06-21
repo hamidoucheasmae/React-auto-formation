@@ -1,0 +1,40 @@
+<!DOCTYPE html><html>
+<head>
+  <script src='../assets/js/react.development.js'></script>
+  <script src='../assets/js/react-dom.development.js'></script>
+  <script src="../assets/js/babel.js"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel">
+
+
+class App extends React.Component {
+
+  fonction() {
+    let data =  this.props ;
+    alert("fonction")
+  }
+
+  render() {
+    return (
+      <div>
+       
+        <button onClick={this.fonction.bind(this)}>
+            OK
+        </button>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(
+  <App />,
+  document.getElementById('root')
+);
+
+
+</script>
+
+</body></html>
